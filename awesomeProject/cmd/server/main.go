@@ -2,6 +2,7 @@ package main
 
 import (
 	"awesomeProject/accounts"
+
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 )
@@ -18,6 +19,9 @@ func main() {
 
 	e.GET("/account", accountsHandler.GetAccount)
 	e.POST("/account/create", accountsHandler.CreateAccount)
+	e.POST("/account/deleteAccount", accountsHandler.DeleteAccount)
+	e.POST("/account/changeName", accountsHandler.ChangeAccount)
+	e.POST("/account/changeBalance", accountsHandler.PathAccount)
 
 	// Start server
 	e.Logger.Fatal(e.Start(":1323"))

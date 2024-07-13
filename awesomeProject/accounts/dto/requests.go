@@ -17,3 +17,13 @@ type ChangeAccountRequest struct {
 type DeleteAccountRequest struct {
 	Name string `json:"name"`
 }
+
+type ChangeAccountNameRequest struct {
+	Name    string `json:"name"`
+	NameNew string `json:"nameNew"`
+}
+
+type ChangeAccountBalanceRequest struct {
+	Name      string `json:"name"`
+	AmountNew int    `json:"amountNew"`
+}
